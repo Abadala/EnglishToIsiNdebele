@@ -65,26 +65,27 @@ def translation_couresel():
 def free_form_translation():
     # enter english::isiNdebele. If word already exists but different translation,
     # append translation to translations list
-    eng_nde_translation = input('eng::nde > ')
+    eng_nde_translation = input('nde::eng > ')
     # validate input, never trust user
-    eng, nde = translation.strip().split('::')
+    nde, eng = eng_nde_translation.strip().split('::')
 
-    with open('translations.json', 'r') as f:
-        translation = {
-            'English': eng,
-            'lexical_category': 'noun',
-            'isiNdebeleTranslations': [
-                {
-                    'isiNdebeleTranslation': nde.strip(),
-                    'translationDateTime': str(datetime.datetime.now()), # convert to epoch millis
-                    'translatedBy': 'Busani Sibusiso Qotho',
-                    'upVotes': 0,
-                    'downVotes': 0
-                }
-            ]
-        }
+    translation = {
+        'English': eng,
+        'lexical_category': 'noun',
+        'isiNdebeleTranslations': [
+            {
+                'isiNdebeleTranslation': nde.strip(),
+                'translationDateTime': str(datetime.datetime.now()), # convert to epoch millis
+                'translatedBy': 'Busani Sibusiso Qotho',
+                'upVotes': 0,
+                'downVotes': 0
+            }
+        ]
+    }
 
-    
+    print('UNPERSISTED_TRANSLATION: ', translation)
+    # persist_translation(translation)
+
     return
 
 
@@ -93,6 +94,7 @@ def free_form_translation():
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == '--freeform':
-        free_form_translation()
+        while True:
+            free_form_translation()
     else:
         translation_couresel()

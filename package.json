@@ -1,0 +1,22 @@
+{
+  "name": "englishtoisindebele",
+  "version": "1.0.0",
+  "description": "A crowd source effort to translate English to isiNdebele spoken by amaHlabezulu or the Northern Ndebele people,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abadala/EnglishToIsiNdebele.git"
+  },
+  "author": "Busani Ndlovu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abadala/EnglishToIsiNdebele/issues"
+  },
+  "homepage": "https://github.com/abadala/EnglishToIsiNdebele#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
