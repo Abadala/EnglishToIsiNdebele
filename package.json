@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/abadala/EnglishToIsiNdebele#readme",
   "dependencies": {
+    "colors": "^1.4.0",
+    "consola": "^2.15.3",
+    "mocha-logger": "^1.0.7",
+    "ololog": "^1.1.175",
     "prompt-sync": "^4.2.0"
   }
 }
